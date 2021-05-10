@@ -1,0 +1,171 @@
+@keyframes pisca {
+    0% {opacity: 0.2;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+
+
+.urna {
+    background-color: #dbd6cb;
+    padding: 30px;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+}
+.tela {
+    width: 500px;
+    height: 350px;
+    border: 2px solid #333;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
+    display: flex;
+    flex-direction: column;
+}
+.teclado {
+    background-color: #403A3A;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+
+.teclado--botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    /*grid-template-rows: repeat(4, 40px);*/
+    grid-auto-rows: 40px;
+    gap: 20px;
+}
+.teclado--botao {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: #000;
+    box-shadow: 3px 3px 0 #555;
+}
+.teclado--botao.zero {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.botoes--comando {
+    display: grid;
+    align-items:end;
+    grid-template-columns: 70px 70px 100px;
+    gap: 0 20px;
+    color: #000;
+    margin-top: 30px;
+    font-size: 15px;
+ 
+}
+.botao--comando {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 0 #555;
+}
+.botao--comando.branco {
+    background-color: #FFF;
+    height: 40px;
+}
+.botao--comando.corrige {
+    background-color: #fa9444;
+    height: 40px;
+}
+.botao--comando.confirma {
+    background-color: #3cb17a;
+    height: 50px;
+}
+
+
+
+.d-1 {
+    flex: 1;
+    display: flex;
+}
+.d-2 {
+    height: 55px;
+    font-size: 15px;
+    border-top: 2px solid #000;
+    padding-left: 10px;
+}
+
+
+
+.d-1--left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.d-1--right {
+    width: 100px;
+}
+
+
+
+.d-1--para {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.d-1--cargo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-1--digitos {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.d-1--info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.d-1--digitos .numero {
+    display: inline-block;
+    height: 50px;
+    width: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+
+.d-1--right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.d-1--img {
+    background-color: #FFF;
+    text-align: center;
+    border: 1px solid #000;
+}
+.d-1--img img {
+    width: 100%;
+}
+.d-1--img.smaller {
+    font-size: 13px;
+    width: 80%;
+}
+
